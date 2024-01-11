@@ -12,6 +12,7 @@ let response = fetch('https://memin.io/public/api/users')
         let fila = document.createElement("tr");
 
         let IdCell = document.createElement("td");
+        IdCell.classList.add('px-2')
         IdCell.textContent = element.id;
         
         let nameCell = document.createElement("td");
