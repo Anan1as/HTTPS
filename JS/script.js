@@ -125,3 +125,10 @@ enviar.addEventListener("click", function() {
         });
     };
 });
+
+//Boton para recargar la página
+let recargar = document.getElementById("recargar");
+
+recargar.addEventListener("click", function() {
+    location.reload();
+});
