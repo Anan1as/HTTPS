@@ -16,9 +16,11 @@ let response = fetch('https://memin.io/public/api/users')
         IdCell.textContent = element.id;
         
         let nameCell = document.createElement("td");
+        nameCell.setAttribute("name", "name");
         nameCell.textContent = element.name;
         
         let emailCell = document.createElement("td");
+        emailCell.setAttribute("name", "email");
         emailCell.textContent = element.email;
 
         let optionCell = document.createElement("td");
@@ -133,3 +135,21 @@ let recargar = document.getElementById("recargar");
 recargar.addEventListener("click", function() {
     location.reload();
 });
+
+//Barra de busqueda
+let searchBar = document.getElementById("searchBar");
+
+function buscar () {
+    let busqueda = searchBar.value;
+    let names = document.getElementsByName("name");
+    let emails = document.getElementsByName("email");
+    busqueda = busqueda.toLowerCase();
+
+    for(let i = 0; i < names.length; i++) {
+        if (!names[i].textContent.toLowerCase().includes(busqueda) && !emails[i].textContent.toLowerCase().includes(busqueda)) {
+            names[i].parentElement.style.display = "none"
+        } else {
+            names[i].parentElement.style.display = ""
+        }
+    }
+}

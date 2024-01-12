@@ -27,6 +27,12 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-3">
+                <div id="searchbar">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">?</span>
+                        <input type="text" id="searchBar" onkeyup="buscar()" class="form-control" placeholder="Buscar" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
                 <div class="border rounded px-3"><br>
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre aquí">
